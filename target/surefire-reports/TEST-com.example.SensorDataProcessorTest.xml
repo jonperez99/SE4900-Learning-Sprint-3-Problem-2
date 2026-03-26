@@ -1,73 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.SensorDataProcessorTest" time="0.293" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.SensorDataProcessorTest" time="0.057" tests="8" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="sun.desktop" value="windows"/>
-    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
-    <property name="java.specification.version" value="11"/>
+    <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2\target\test-classes;C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2\target\classes;C:\Users\llama\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\llama\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\llama\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\llama\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\llama\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\llama\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
-    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="java.class.path" value="C:\Users\Jon\Desktop\school\Spring2026\SE4900\SE4900-Learning-Sprint-3-Problem-2\target\test-classes;C:\Users\Jon\Desktop\school\Spring2026\SE4900\SE4900-Learning-Sprint-3-Problem-2\target\classes;C:\Users\Jon\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Jon\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Jon\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Jon\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Jon\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Jon\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
-    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="America/Chicago"/>
-    <property name="java.vm.specification.version" value="11"/>
-    <property name="os.name" value="Windows 10"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.14.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\llama\AppData\Local\Temp\surefire3751140241186396337\surefirebooter-20260326131537647_3.jar C:\Users\llama\AppData\Local\Temp\surefire3751140241186396337 2026-03-26T13-15-36_875-jvmRun1 surefire-20260326131537647_1tmp surefire_0-20260326131537647_2tmp"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25\bin"/>
+    <property name="sun.java.command" value="C:\Users\Jon\AppData\Local\Temp\surefire6058690779474336206\surefirebooter-20260326181914615_3.jar C:\Users\Jon\AppData\Local\Temp\surefire6058690779474336206 2026-03-26T18-19-14_384-jvmRun1 surefire-20260326181914615_1tmp surefire_0-20260326181914615_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2\target\test-classes;C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2\target\classes;C:\Users\llama\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\llama\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\llama\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\llama\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\llama\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\llama\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\Jon\Desktop\school\Spring2026\SE4900\SE4900-Learning-Sprint-3-Problem-2\target\test-classes;C:\Users\Jon\Desktop\school\Spring2026\SE4900\SE4900-Learning-Sprint-3-Problem-2\target\classes;C:\Users\Jon\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\Jon\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Jon\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\Jon\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Jon\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\Jon\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\llama"/>
+    <property name="user.home" value="C:\Users\Jon"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2022-01-18"/>
-    <property name="java.home" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.14.9-hotspot"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2"/>
+    <property name="basedir" value="C:\Users\Jon\Desktop\school\Spring2026\SE4900\SE4900-Learning-Sprint-3-Problem-2"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\llama\AppData\Local\Temp\surefire3751140241186396337\surefirebooter-20260326131537647_3.jar"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Jon\AppData\Local\Temp\surefire6058690779474336206\surefirebooter-20260326181914615_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="11.0.14+9"/>
-    <property name="user.name" value="llama"/>
+    <property name="java.runtime.version" value="25.0.1+8-LTS-27"/>
+    <property name="user.name" value="Jon"/>
+    <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="file.encoding" value="Cp1252"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="java.vendor.version" value="Temurin-11.0.14+9"/>
-    <property name="localRepository" value="C:\Users\llama\.m2\repository"/>
-    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
-    <property name="java.io.tmpdir" value="C:\Users\llama\AppData\Local\Temp\"/>
-    <property name="java.version" value="11.0.14"/>
-    <property name="user.dir" value="C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Jon\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Jon\AppData\Local\Temp\"/>
+    <property name="java.version" value="25.0.1"/>
+    <property name="user.dir" value="C:\Users\Jon\Desktop\school\Spring2026\SE4900\SE4900-Learning-Sprint-3-Problem-2"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.14.9-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Mozilla Firefox;C:\Program Files\Eclipse Adoptium\jdk-11.0.14.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\msys64\ucrt64\bin;C:\Users\llama\AppData\Local\Microsoft\WindowsApps;C:\Exercism;C:\Users\llama\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\llama\AppData\Local\GitHubDesktop\bin;C:\msys64\ucrt64\bin;;."/>
-    <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.vendor" value="Eclipse Adoptium"/>
-    <property name="java.vm.version" value="11.0.14+9"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Mozilla Firefox;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Eclipse Adoptium\jdk-11.0.18.10-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\playit_gg\bin\;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\chocolatey\lib\maven\apache-maven-3.9.13\bin;C:\Users\Jon\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\Jon\AppData\Local\Programs\Python\Python313\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\Jon\AppData\Local\Microsoft\WindowsApps;C:\Users\Jon\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Jon\AppData\Local\GitHubDesktop\bin;C:\Users\Jon\AppData\Roaming\npm;C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe;C:\msys64\ucrt64\bin;C:\Users\Jon\.dotnet\tools;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.0.1+8-LTS-27"/>
+    <property name="stdin.encoding" value="Cp1252"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="55.0"/>
+    <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testB3Part1TruePart2False_FallsToElse" classname="com.example.SensorDataProcessorTest" time="0.195"/>
-  <testcase name="testB4Else_Continue" classname="com.example.SensorDataProcessorTest" time="0.005"/>
-  <testcase name="testB1BothTrue_BreakOnFirstCondition" classname="com.example.SensorDataProcessorTest" time="0.008"/>
-  <testcase name="testB2True_B1False_BreakOnSecondCondition" classname="com.example.SensorDataProcessorTest" time="0.005"/>
-  <testcase name="testMultipleSensorsAndReadings" classname="com.example.SensorDataProcessorTest" time="0.004"/>
-  <testcase name="testB1LeftTrueRightFalse_ThenB2True" classname="com.example.SensorDataProcessorTest" time="0.003"/>
-  <testcase name="testB3True_MultiplyByTwo" classname="com.example.SensorDataProcessorTest" time="0.005"/>
-  <testcase name="testIOExceptionCaught" classname="com.example.SensorDataProcessorTest" time="0.011">
+  <testcase name="testB3Part1TruePart2False_FallsToElse" classname="com.example.SensorDataProcessorTest" time="0.024"/>
+  <testcase name="testB4Else_Continue" classname="com.example.SensorDataProcessorTest" time="0.003"/>
+  <testcase name="testB1BothTrue_BreakOnFirstCondition" classname="com.example.SensorDataProcessorTest" time="0.004"/>
+  <testcase name="testB2True_B1False_BreakOnSecondCondition" classname="com.example.SensorDataProcessorTest" time="0.003"/>
+  <testcase name="testMultipleSensorsAndReadings" classname="com.example.SensorDataProcessorTest" time="0.002"/>
+  <testcase name="testB1LeftTrueRightFalse_ThenB2True" classname="com.example.SensorDataProcessorTest" time="0.002"/>
+  <testcase name="testB3True_MultiplyByTwo" classname="com.example.SensorDataProcessorTest" time="0.001"/>
+  <testcase name="testIOExceptionCaught" classname="com.example.SensorDataProcessorTest" time="0.004">
     <system-out><![CDATA[Error= java.io.FileNotFoundException: RacingStatsData.txt (Access is denied)
 ]]></system-out>
   </testcase>

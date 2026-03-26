@@ -18,57 +18,89 @@ public class SensorDataProcessor{
 
     // calculates average of sensor data
     private double average(double[] array) {
-<span class="fc" id="L21">        int i = 0;</span>
-<span class="fc" id="L22">        double val = 0;</span>
-<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (i = 0; i &lt; array.length; i++) {</span>
-<span class="fc" id="L24">            val += array[i];</span>
+<span class="nc" id="L21">        int i = 0;</span>
+<span class="nc" id="L22">        double val = 0;</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        for (i = 0; i &lt; array.length; i++) {</span>
+<span class="nc" id="L24">            val += array[i];</span>
         }
 
-<span class="fc" id="L27">        return val / array.length;</span>
+<span class="nc" id="L27">        return val / array.length;</span>
     }
 
     // calculate data
     public void calculate(double d) {
 
-<span class="fc" id="L33">        int i, j, k = 0;</span>
-<span class="fc" id="L34">        double[][][] data2 = new double[data.length][data[0].length][data[0][0].length];</span>
+        int i, j, k;
+<span class="fc" id="L34">        int iLen = data.length;</span>
+<span class="fc" id="L35">        int jLen = data[0].length;</span>
+<span class="fc" id="L36">        int kLen = data[0][0].length;</span>
+        
+<span class="fc" id="L38">        double inverseD = 1.0 / d;</span>
+<span class="fc" id="L39">        double inverseKLen = 1.0 / kLen;</span>
+        
+<span class="fc" id="L41">        double lowBound = 10.0 * kLen;</span>
+<span class="fc" id="L42">        double highBound = 50.0 * kLen;</span>
 
         BufferedWriter out;
 
         // Write racing stats data into a file
         try {
-<span class="fc" id="L40">            out = new BufferedWriter(new FileWriter(&quot;RacingStatsData.txt&quot;));</span>
+<span class="fc" id="L48">            out = new BufferedWriter(new FileWriter(&quot;RacingStatsData.txt&quot;), 65536);</span>
 
-<span class="fc bfc" id="L42" title="All 2 branches covered.">            for (i = 0; i &lt; data.length; i++) {</span>
-<span class="fc bfc" id="L43" title="All 2 branches covered.">                for (j = 0; j &lt; data[0].length; j++) {</span>
-<span class="fc bfc" id="L44" title="All 2 branches covered.">                    for (k = 0; k &lt; data[0][0].length; k++) {</span>
-<span class="fc" id="L45">                        data2[i][j][k] = data[i][j][k] / d - Math.pow(limit[i][j], 2.0);</span>
+<span class="fc" id="L50">            double[] currentData2 = new double[kLen];</span>
+<span class="fc" id="L51">            String currentData2Str = currentData2.toString();</span>
 
-<span class="fc bfc" id="L47" title="All 4 branches covered.">                        if (average(data2[i][j]) &gt; 10 &amp;&amp; average(data2[i][j]) &lt; 50)</span>
-<span class="fc" id="L48">                            break;</span>
-<span class="fc bfc" id="L49" title="All 2 branches covered.">                        else if (Math.max(data[i][j][k], data2[i][j][k]) &gt; data[i][j][k])</span>
-<span class="fc" id="L50">                            break;</span>
-<span class="fc bfc" id="L51" title="All 2 branches covered.">                        else if (Math.pow(Math.abs(data[i][j][k]), 3) &lt; Math.pow(Math.abs(data2[i][j][k]), 3)</span>
-<span class="pc bpc" id="L52" title="1 of 4 branches missed.">                                &amp;&amp; average(data[i][j]) &lt; data2[i][j][k] &amp;&amp; (i + 1) * (j + 1) &gt; 0)</span>
-<span class="fc" id="L53">                            data2[i][j][k] *= 2;</span>
-                        else
-                            continue;
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            for (i = 0; i &lt; iLen; i++) {</span>
+<span class="fc" id="L54">                double[][] dataI = data[i];</span>
+<span class="fc" id="L55">                double[] limitI = limit[i];</span>
+
+<span class="fc bfc" id="L57" title="All 2 branches covered.">                for (j = 0; j &lt; jLen; j++) {</span>
+<span class="fc" id="L58">                    double[] currentData = dataI[j];</span>
+<span class="fc" id="L59">                    double limitIJ = limitI[j];</span>
+<span class="fc" id="L60">                    double limitSquare = limitIJ * limitIJ;</span>
+                    
+<span class="fc" id="L62">                    double avgData = Double.NaN;</span>
+<span class="fc" id="L63">                    double sum2 = 0.0;</span>
+
+<span class="fc bfc" id="L65" title="All 2 branches covered.">                    for (k = 0; k &lt; kLen; k++) {</span>
+<span class="fc" id="L66">                        double val = currentData[k];</span>
+<span class="fc" id="L67">                        double val2 = val * inverseD - limitSquare;</span>
+<span class="fc" id="L68">                        currentData2[k] = val2;</span>
+<span class="fc" id="L69">                        sum2 += val2;</span>
+
+<span class="pc bpc" id="L71" title="1 of 6 branches missed.">                        if (val2 &gt; val || (sum2 &gt; lowBound &amp;&amp; sum2 &lt; highBound)) {</span>
+<span class="fc" id="L72">                            break;</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">                        } else if (Math.abs(val) &lt; Math.abs(val2)) {</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">                            if (avgData != avgData) {</span>
+<span class="fc" id="L75">                                double tempSum = 0.0;</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">                                for (double cv : currentData) {</span>
+<span class="fc" id="L77">                                    tempSum += cv;</span>
+                                }
+<span class="fc" id="L79">                                avgData = tempSum * inverseKLen;</span>
+                            }
+<span class="fc bfc" id="L81" title="All 2 branches covered.">                            if (avgData &lt; val2) {</span>
+<span class="fc" id="L82">                                currentData2[k] = val2 * 2.0;</span>
+<span class="fc" id="L83">                                sum2 += val2;</span>
+                            }
+                        }
+                    }
+
+<span class="fc" id="L88">                    out.write(currentData2Str);</span>
+<span class="fc" id="L89">                    out.write('\t');</span>
+
+<span class="fc bfc" id="L91" title="All 2 branches covered.">                    int maxClean = (k &lt; kLen) ? k : kLen - 1;</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">                    for (int z = 0; z &lt;= maxClean; z++) {</span>
+<span class="fc" id="L93">                        currentData2[z] = 0.0;</span>
                     }
                 }
             }
 
-<span class="fc bfc" id="L60" title="All 2 branches covered.">            for (i = 0; i &lt; data2.length; i++) {</span>
-<span class="fc bfc" id="L61" title="All 2 branches covered.">                for (j = 0; j &lt; data2[0].length; j++) {</span>
-<span class="fc" id="L62">                    out.write(data2[i][j] + &quot;\t&quot;);</span>
-                }
-            }
+<span class="fc" id="L98">            out.close();</span>
 
-<span class="fc" id="L66">            out.close();</span>
-
-<span class="fc" id="L68">        } catch (Exception e) {</span>
-<span class="fc" id="L69">            System.out.println(&quot;Error= &quot; + e);</span>
-<span class="fc" id="L70">        }</span>
-<span class="fc" id="L71">    }</span>
+<span class="fc" id="L100">        } catch (Exception e) {</span>
+<span class="fc" id="L101">            System.out.println(&quot;Error= &quot; + e);</span>
+        }
+<span class="fc" id="L103">    }</span>
     
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

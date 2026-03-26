@@ -30,36 +30,68 @@ public class SensorDataProcessor{
     // calculate data
     public void calculate(double d) {
 
-        int i, j, k = 0;
-        double[][][] data2 = new double[data.length][data[0].length][data[0][0].length];
+        int i, j, k;
+        int iLen = data.length;
+        int jLen = data[0].length;
+        int kLen = data[0][0].length;
+        
+        double inverseD = 1.0 / d;
+        double inverseKLen = 1.0 / kLen;
+        
+        double lowBound = 10.0 * kLen;
+        double highBound = 50.0 * kLen;
 
         BufferedWriter out;
 
         // Write racing stats data into a file
         try {
-            out = new BufferedWriter(new FileWriter("RacingStatsData.txt"));
+            out = new BufferedWriter(new FileWriter("RacingStatsData.txt"), 65536);
 
-            for (i = 0; i < data.length; i++) {
-                for (j = 0; j < data[0].length; j++) {
-                    for (k = 0; k < data[0][0].length; k++) {
-                        data2[i][j][k] = data[i][j][k] / d - Math.pow(limit[i][j], 2.0);
+            double[] currentData2 = new double[kLen];
+            String currentData2Str = currentData2.toString();
 
-                        if (average(data2[i][j]) > 10 && average(data2[i][j]) < 50)
+            for (i = 0; i < iLen; i++) {
+                double[][] dataI = data[i];
+                double[] limitI = limit[i];
+
+                for (j = 0; j < jLen; j++) {
+                    double[] currentData = dataI[j];
+                    double limitIJ = limitI[j];
+                    double limitSquare = limitIJ * limitIJ;
+                    
+                    double avgData = Double.NaN;
+                    double sum2 = 0.0;
+
+                    for (k = 0; k < kLen; k++) {
+                        double val = currentData[k];
+                        double val2 = val * inverseD - limitSquare;
+                        currentData2[k] = val2;
+                        sum2 += val2;
+
+                        if (val2 > val || (sum2 > lowBound && sum2 < highBound)) {
                             break;
-                        else if (Math.max(data[i][j][k], data2[i][j][k]) > data[i][j][k])
-                            break;
-                        else if (Math.pow(Math.abs(data[i][j][k]), 3) < Math.pow(Math.abs(data2[i][j][k]), 3)
-                                && average(data[i][j]) < data2[i][j][k] && (i + 1) * (j + 1) > 0)
-                            data2[i][j][k] *= 2;
-                        else
-                            continue;
+                        } else if (Math.abs(val) < Math.abs(val2)) {
+                            if (avgData != avgData) {
+                                double tempSum = 0.0;
+                                for (double cv : currentData) {
+                                    tempSum += cv;
+                                }
+                                avgData = tempSum * inverseKLen;
+                            }
+                            if (avgData < val2) {
+                                currentData2[k] = val2 * 2.0;
+                                sum2 += val2;
+                            }
+                        }
                     }
-                }
-            }
 
-            for (i = 0; i < data2.length; i++) {
-                for (j = 0; j < data2[0].length; j++) {
-                    out.write(data2[i][j] + "\t");
+                    out.write(currentData2Str);
+                    out.write('\t');
+
+                    int maxClean = (k < kLen) ? k : kLen - 1;
+                    for (int z = 0; z <= maxClean; z++) {
+                        currentData2[z] = 0.0;
+                    }
                 }
             }
 
