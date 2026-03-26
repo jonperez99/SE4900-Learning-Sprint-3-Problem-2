@@ -28,7 +28,7 @@ public class SensorDataProcessor {
 
     // calculate data
 
-    /*
+    /**
      * manual improvements to the original
      * 
      * 1. put iLength, jLength, kLength as variables to reduce the amount of times
@@ -45,13 +45,15 @@ public class SensorDataProcessor {
      * 5. Math.max(data[i][j][k], data2[i][j][k]) > data[i][j][k] can be simplified
      * to data2[i][j][k] > data[i][j][k]:
      * 
-     * | Math.max(x, y) > x | y > x
+     * <pre>
+     *                  | Math.max(x, y) > x |          y > x
      * -------------------------------------------------------------------
-     * y < x | false | false
-     * | |
-     * y == x | false | false
-     * | |
-     * y > x | true | true
+     * .         y < x  |       false        |          false
+     * .                |                    |
+     * .        y == x  |       false        |          false
+     * .                |                    |
+     * .        y > x   |       true         |          true
+     * </pre>
      * 
      */
     public void calculate(double d) {
