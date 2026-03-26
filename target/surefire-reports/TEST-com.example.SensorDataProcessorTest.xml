@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="src.main.java.SensorDataProcessorTest" time="0.133" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.SensorDataProcessorTest" time="0.293" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-11.0.14.9-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\llama\AppData\Local\Temp\surefire6296036878592054699\surefirebooter-20260326115402755_3.jar C:\Users\llama\AppData\Local\Temp\surefire6296036878592054699 2026-03-26T11-54-02_253-jvmRun1 surefire-20260326115402755_1tmp surefire_0-20260326115402755_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\llama\AppData\Local\Temp\surefire3751140241186396337\surefirebooter-20260326131537647_3.jar C:\Users\llama\AppData\Local\Temp\surefire3751140241186396337 2026-03-26T13-15-36_875-jvmRun1 surefire-20260326131537647_1tmp surefire_0-20260326131537647_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2\target\test-classes;C:\Users\llama\OneDrive\Desktop\School\Spring2026\COMS4900\Learning Sprint 3\Problem 2\target\classes;C:\Users\llama\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\llama\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\llama\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\llama\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\llama\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\llama\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\llama\AppData\Local\Temp\surefire6296036878592054699\surefirebooter-20260326115402755_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\llama\AppData\Local\Temp\surefire3751140241186396337\surefirebooter-20260326131537647_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="11.0.14+9"/>
@@ -60,14 +60,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testB3Part1TruePart2False_FallsToElse" classname="src.main.java.SensorDataProcessorTest" time="0.065"/>
-  <testcase name="testB4Else_Continue" classname="src.main.java.SensorDataProcessorTest" time="0.004"/>
-  <testcase name="testB1BothTrue_BreakOnFirstCondition" classname="src.main.java.SensorDataProcessorTest" time="0.007"/>
-  <testcase name="testB2True_B1False_BreakOnSecondCondition" classname="src.main.java.SensorDataProcessorTest" time="0.003"/>
-  <testcase name="testMultipleSensorsAndReadings" classname="src.main.java.SensorDataProcessorTest" time="0.004"/>
-  <testcase name="testB1LeftTrueRightFalse_ThenB2True" classname="src.main.java.SensorDataProcessorTest" time="0.003"/>
-  <testcase name="testB3True_MultiplyByTwo" classname="src.main.java.SensorDataProcessorTest" time="0.003"/>
-  <testcase name="testIOExceptionCaught" classname="src.main.java.SensorDataProcessorTest" time="0.01">
+  <testcase name="testB3Part1TruePart2False_FallsToElse" classname="com.example.SensorDataProcessorTest" time="0.195"/>
+  <testcase name="testB4Else_Continue" classname="com.example.SensorDataProcessorTest" time="0.005"/>
+  <testcase name="testB1BothTrue_BreakOnFirstCondition" classname="com.example.SensorDataProcessorTest" time="0.008"/>
+  <testcase name="testB2True_B1False_BreakOnSecondCondition" classname="com.example.SensorDataProcessorTest" time="0.005"/>
+  <testcase name="testMultipleSensorsAndReadings" classname="com.example.SensorDataProcessorTest" time="0.004"/>
+  <testcase name="testB1LeftTrueRightFalse_ThenB2True" classname="com.example.SensorDataProcessorTest" time="0.003"/>
+  <testcase name="testB3True_MultiplyByTwo" classname="com.example.SensorDataProcessorTest" time="0.005"/>
+  <testcase name="testIOExceptionCaught" classname="com.example.SensorDataProcessorTest" time="0.011">
     <system-out><![CDATA[Error= java.io.FileNotFoundException: RacingStatsData.txt (Access is denied)
 ]]></system-out>
   </testcase>
